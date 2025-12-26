@@ -1,0 +1,53 @@
+.sec{
+  max-width: 1920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 160px;
+}
+
+h3 {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 160%;
+  color: #0d4949;
+  text-transform: uppercase;
+  text-align: center;
+}
+.main {
+  
+  width: 1600px;
+  height: 793px;
+  
+  
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 24px;
+}
+
+.container{
+  display: flex;
+  margin-top: 36px;
+}
+
+.title{
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  margin: 16px 0 8px;
+}
+
+.desc{
+  font-size: 17px;
+  line-height: 1.6;
+  color: #555;
+  font-family: "Montserrat", sans-serif;
+  width: 720px;
+  margin: 12px;
+}

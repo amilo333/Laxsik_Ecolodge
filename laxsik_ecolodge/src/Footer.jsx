@@ -1,0 +1,37 @@
+import React from "react";
+import logo from "./assets/images/logo.png";
+import styles from "./footer.module.css";
+import ic_facebook from "../src/assets/images/icon/ic_facebook.png";
+import ic_linkedin from "../src/assets/images/icon/ic_linkedin.png";
+import ic_twitter from "../src/assets/images/icon/ic_twitter.png";
+import ic_instagram from "../src/assets/images/icon/ic_instagram.png";
+
+export default function Footer() {
+  return (
+    <div>
+      <div className={styles.container}>
+        <img src={logo} alt="" className={styles.logo} />
+        <p>Lao Chai, Sa Pa, Lao Cai, Vietnam</p>
+        <div className={styles.info}>
+          <div className={styles.hotline}>Hotline: (+84) 214 3892 999</div>
+          <div className={styles.email}>
+            Email: info@laxsik.com or laxsik.customercare@gmail.com
+          </div>
+        </div>
+        <div className={styles.network}>
+          <img src={ic_twitter} alt="" />
+          <img src={ic_linkedin} alt="" />
+          <img src={ic_facebook} alt="" />
+          <img src={ic_instagram} alt="" />
+        </div>
+        <div className={styles.list}>
+          <div className={styles.item}>Join Our Teams</div>
+          <div className={styles.item}>Become a Partner</div>
+          <div className={styles.item}>Privacy & policies</div>
+          <div className={styles.item}>Terms & Conditions</div>
+        </div>
+        <div className={styles.copyright}>© Copyright Laxsik Ecolodge 2024</div>
+      </div>
+    </div>
+  );
+}

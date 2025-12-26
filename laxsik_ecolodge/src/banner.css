@@ -1,0 +1,14 @@
+.banner {
+  height: 970px;
+  width: 1920px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 391px) {
+  .img-banner {
+    margin-top: 64px;
+    height: 216.11px;
+    width: 390px;
+    object-fit: cover;
+  }
+}

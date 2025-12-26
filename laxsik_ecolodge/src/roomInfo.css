@@ -1,0 +1,109 @@
+/* ================= SWIPER LAYOUT ================= */
+.swiper-wrapper {
+  align-items: flex-end; /* căn đáy tất cả slide */
+}
+
+/* ================= SLIDE MẶC ĐỊNH ================= */
+.swiper-slide {
+  width: 480px;
+  height: 656px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: scale(0.9) translateY(0);
+  transition: transform 0.45s ease;
+  z-index: 1;
+}
+
+/* ================= SLIDE ACTIVE ================= */
+.swiper-slide-active {
+  transform: scale(1) translateY(-80px);
+  z-index: 10;
+}
+
+/* ================= IMAGE ================= */
+.img-room {
+  width: 480px;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================= INFO ================= */
+.info-room {
+  margin: 24px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ================= TITLE ================= */
+.title h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  margin: 16px 0 8px;
+}
+
+/* ================= CONTENT + FOOTER ================= */
+
+.swiper-slide .content,
+.swiper-slide .footer {
+  display: none;
+}
+
+/* ✅ Chỉ active mới hiện */
+.swiper-slide-active .content,
+.swiper-slide-active .footer {
+  display: block;
+}
+
+/* ================= DESCRIPTION ================= */
+.text-box p {
+  margin-top: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ================= BUTTON ================= */
+.footer button {
+  margin-top: 16px;
+  width: 426px;
+  height: 62px;
+  border: none;
+  background: #0d4949;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ================= PAGINATION ================= */
+.swiper-pagination-bullet {
+  background: #ccc;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000;
+  width: 18px;
+  border-radius: 6px;
+}
+
+.container{
+    width: 1920px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+}
+.container h3 {
+  font-family: "Lora";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 160%;
+  color: #0d4949;
+  text-transform: uppercase;
+}
