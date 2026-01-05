@@ -8,7 +8,6 @@
 .container .logo {
   width: 233.7px;
   height: 160px;
-  display: block;
   object-fit: contain;
 }
 
@@ -46,7 +45,7 @@
 
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 
 .copyright {
@@ -60,5 +59,46 @@
   font-size: 16px;
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
-  
+}
+
+.logo_1 {
+  display: none;
+}
+
+@media screen and (max-width: 391px) {
+  .logo {
+    display: none;
+  }
+  .logo_1 {
+    display: block;
+    width: 175.28px;
+    height: 120px;
+    object-fit: contain;
+  }
+
+  .container p,
+  .hotline,
+  .email,
+  .item {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .email {
+    line-height: 1.5;
+  }
+
+  .list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  .container{
+    gap: 30px;
+  }
+
+  .copyright{
+    font-size: 12px;
+  }
 }

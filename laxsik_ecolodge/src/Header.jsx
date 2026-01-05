@@ -1,10 +1,15 @@
 import logo from "../src/assets/images/logo/logo_2.png";
 import down from "../src/assets/images/chevron_down.png";
 import flag from "../src/assets/images/flag_eng.png";
+import calendar from "../src/assets/images/icon/ic_calendar.png";
 import "./header.css";
 import { useState } from "react";
 
 export default function Header() {
+  const [show , setShow] = useState(false);
+  const showBooking = () => {
+    setShow(prev => !prev);
+  };
   const [open, setOpen] = useState(false);
   const openBooking = () => {
     setOpen(true);
@@ -48,11 +53,16 @@ export default function Header() {
             <img src={flag} alt="" />
             ENG <img src={down} alt="" />
           </div>
-          <button className="menu-icon">☰</button>
+          <button className="menu-icon" onClick={showBooking}>☰</button>
           <button onClick={openBooking} className="cta">
             FIND NOW
           </button>
         </div>
+      </div>
+      <div className={show ? "sub-header show" : "sub-header" }>
+        <button className="booknow">
+          <img src={calendar} alt="" /><span>BOOK NOW</span>
+        </button>
       </div>
       <div className={open ? "booking-bar show" : "booking-bar"}>
         <button onClick={closeBooking} className="btn-hide">

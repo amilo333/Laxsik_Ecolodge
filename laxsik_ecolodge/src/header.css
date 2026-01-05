@@ -195,13 +195,46 @@
   display: none;
 }
 
+.sub-header {
+  display: none;
+}
+
 @media screen and (max-width: 391px) {
+  .sub-header.show{
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: 68px;
+    background-color: #fff;
+    display: block;
+    padding: 12px 2px 2px 18px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  }
+  .sub-header{
+    display: none;  
+  }
+  .booknow {
+    width: 350px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    background-color: #0d4949;
+    color: #fff;
+  }
+
+  .sub-header .booknow img{
+    filter: brightness(0) invert(1);
+  }
   .header-row {
-    max-width:390px;
+    max-width: 390px;
     height: 64px;
     padding: 12px 16px;
     gap: 12px;
-    
   }
   .name-title {
     display: block;

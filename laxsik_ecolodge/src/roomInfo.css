@@ -1,9 +1,7 @@
-/* ================= SWIPER LAYOUT ================= */
 .swiper-wrapper {
-  align-items: flex-end; /* căn đáy tất cả slide */
+  align-items: flex-start;
 }
 
-/* ================= SLIDE MẶC ĐỊNH ================= */
 .swiper-slide {
   width: 480px;
   height: 656px;
@@ -17,13 +15,11 @@
   z-index: 1;
 }
 
-/* ================= SLIDE ACTIVE ================= */
 .swiper-slide-active {
   transform: scale(1) translateY(-80px);
   z-index: 10;
 }
 
-/* ================= IMAGE ================= */
 .img-room {
   width: 480px;
   height: 360px;
@@ -31,7 +27,6 @@
   display: block;
 }
 
-/* ================= INFO ================= */
 .info-room {
   margin: 24px 32px;
   display: flex;
@@ -40,27 +35,22 @@
   text-align: center;
 }
 
-/* ================= TITLE ================= */
 .title h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   margin: 16px 0 8px;
 }
 
-/* ================= CONTENT + FOOTER ================= */
-
 .swiper-slide .content,
 .swiper-slide .footer {
   display: none;
 }
 
-/* ✅ Chỉ active mới hiện */
 .swiper-slide-active .content,
 .swiper-slide-active .footer {
   display: block;
 }
 
-/* ================= DESCRIPTION ================= */
 .text-box p {
   margin-top: 18px;
   font-size: 14px;
@@ -69,7 +59,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* ================= BUTTON ================= */
 .footer button {
   margin-top: 16px;
   width: 426px;
@@ -80,7 +69,6 @@
   cursor: pointer;
 }
 
-/* ================= PAGINATION ================= */
 .swiper-pagination-bullet {
   background: #ccc;
 }
@@ -91,12 +79,12 @@
   border-radius: 6px;
 }
 
-.container{
-    width: 1920px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 44px;
+.container {
+  width: 1920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
 }
 .container h3 {
   font-family: "Lora";
@@ -107,3 +95,71 @@
   color: #0d4949;
   text-transform: uppercase;
 }
+
+@media (max-width: 391px) {
+  .container{
+    max-width: 390px;
+  }
+  
+  .container h3{
+    font-size: 22px;
+  }
+
+  .title h1{
+    font-size: 16px;
+  }
+  .swiper-slide {
+    width: 300px;
+    height: 479px;
+    transform: scale(0.95);
+  }
+
+  .swiper-slide-active {
+    transform: scale(1) translateY(-20px);
+  }
+
+  
+  .img-room {
+    width: 300px;
+    height: 180px;
+  }
+
+  .swiper-slide .content,
+  .swiper-slide .footer {
+    display: block;
+  }
+
+  
+  .text-box p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 8px;
+
+    
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+ 
+  .info-room {
+    height: calc(479px - 180px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer button {
+    width: calc(100% - 32px);
+    height: 44px;
+    font-size: 13px;
+  }
+}
+

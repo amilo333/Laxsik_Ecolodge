@@ -31,19 +31,63 @@
   font-weight: 400;
   font-size: 17px;
   text-align: center;
-  width: 762px;
+  max-width: 762px;
   height: 54px;
   padding: 0 150px;
 }
 
-h3{
-    margin: 0;
+h3 {
+  margin: 0;
 }
 
 .line {
-  width: 1920px;
+  max-width: 1920px;
   height: 1px;
   background: #d0d0d0;
   margin: 24px 0;
 }
 
+@media screen and (max-width: 391px) {
+  .container p {
+    font-size: 13px;
+    padding: 0 20px;
+    margin-top: 12px;
+    /* width: ; */
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .title{
+    width: 100%;
+
+  }
+  .list{
+    height:529px ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  .box{    
+    height: 171px;
+    width: 171px;
+  }
+
+  .box img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .name{
+    display: none;
+  }
+  .line{
+    width: 100%;
+  }
+}

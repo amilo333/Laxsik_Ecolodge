@@ -51,3 +51,53 @@ h3 {
   width: 720px;
   margin: 12px;
 }
+
+@media screen and (max-width:391px) {
+  h3{
+    font-size: 22px;
+  }
+  
+   .sec{
+      margin: 40px 16px;
+   }
+   .main{
+    width: 100%;
+    height: auto;
+   }
+
+   .container{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+   }
+   .box{
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    height: 411px;
+   }
+
+   .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .imgService img{
+    max-width: 390px;
+    /* width: 100%; */
+   }
+
+   .title{
+    font-size: 18px;
+   }
+   .desc{
+    width: 100%;
+    font-size: 13px;
+    line-height: 1.5;
+   }
+
+}
