@@ -59,7 +59,7 @@ export default function PostSapa() {
             </div>
           ))}
         </div>
-        <div className={styles.line}></div>
+        <div className={styles['line']}></div>
       </div>
     </div>
   );

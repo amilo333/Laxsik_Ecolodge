@@ -18,22 +18,22 @@ const services = [
 
 export default function ServiceSection() {
   return (
-    <div className={styles.sec}>   
+    <div className={styles.sec}>
       <section className={styles.main}>
         <h3>Laxsik Ecolodge</h3>
         <div className={styles.container}>
-            {services.map((service, index) => (
-          <div className={styles.box} key={index}>
-            <div className={styles.imgService}>
-              <img src={service.image} alt={service.title} />
-            </div>
+          {services.map((service, index) => (
+            <div className={styles.box} key={index}>
+              <div className={styles.imgService}>
+                <img src={service.image} alt={service.title} />
+              </div>
 
-            <div className={styles.content}>
-              <h4 className={styles.title}>{service.title}</h4>
-              <p className={styles.desc}>{service.desc}</p>
+              <div className={styles.content}>
+                <h4 className={styles.title}>{service.title}</h4>
+                <p className={styles.desc}>{service.desc}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
       </section>
     </div>

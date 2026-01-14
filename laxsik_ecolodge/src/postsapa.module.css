@@ -13,6 +13,7 @@
 
 .box img {
   border-radius: 10px;
+  width: 100%;
 }
 
 .name {
@@ -41,7 +42,7 @@ h3 {
 }
 
 .line {
-  max-width: 1920px;
+  max-width: 100%;
   height: 1px;
   background: #d0d0d0;
   margin: 24px 0;

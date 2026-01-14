@@ -40,6 +40,7 @@ const rooms = [
 ];
 export default function RoomInfo() {
   const swiperWrappedRef = useRef(null);
+
   function adjustMargin() {
     const screenWidth = window.innerWidth;
     if (swiperWrappedRef.current) {
@@ -59,6 +60,7 @@ export default function RoomInfo() {
     window.addEventListener("resize", adjustMargin);
     return () => window.removeEventListener("resize", adjustMargin);
   }, []);
+
   return (
     <main>
       <div className="container">
@@ -83,21 +85,21 @@ export default function RoomInfo() {
         >
           {rooms.map((room, index) => (
             <SwiperSlide key={index}>
-              <img src={room.image} alt="" className="img-room"/>
+              <img src={room.image} alt="" className="img-room" />
               <div className="info-room">
                 <div className="title">
-                <h1>{room.title}</h1>
-              </div>
-              <div className="content">
-                <div className="text-box">
-                  <p>{room.desc}</p>
+                  <h1>{room.title}</h1>
                 </div>
-              </div>
-              <div className="footer">
-                <button>
-                  <span className="lable">EXPLORE</span>
-                </button>
-              </div>
+                <div className="content">
+                  <div className="text-box">
+                    <p>{room.desc}</p>
+                  </div>
+                </div>
+                <div className="footer">
+                  <button>
+                    <span className="lable">EXPLORE</span>
+                  </button>
+                </div>
               </div>
             </SwiperSlide>
           ))}

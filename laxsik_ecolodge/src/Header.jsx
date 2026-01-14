@@ -4,13 +4,14 @@ import flag from "../src/assets/images/flag_eng.png";
 import calendar from "../src/assets/images/icon/ic_calendar.png";
 import "./header.css";
 import { useState } from "react";
+import {Link} from 'react-router-dom'
 
 export default function Header() {
-  const [show , setShow] = useState(false);
+  const [show, setShow] = useState(false);
   const showBooking = () => {
-    setShow(prev => !prev);
+    setShow((prev) => !prev);
   };
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const openBooking = () => {
     setOpen(true);
   };
@@ -35,7 +36,9 @@ export default function Header() {
             <li>
               ROOMS <img src={down} alt="" />
             </li>
-            <li>DINING</li>
+            <li>
+              <Link style={{textDecoration: "none" ,color:'white'}} to={'dinning'}>DINING</Link>
+            </li>
             <li>
               SPA & MASSAGE <img src={down} alt="" />
             </li>
@@ -53,17 +56,23 @@ export default function Header() {
             <img src={flag} alt="" />
             ENG <img src={down} alt="" />
           </div>
-          <button className="menu-icon" onClick={showBooking}>☰</button>
-          <button onClick={openBooking} className="cta">
-            FIND NOW
+          <button className="menu-icon" onClick={showBooking}>
+            ☰
           </button>
+          {!open && (
+            <button onClick={openBooking} className="cta">
+              FIND NOW
+            </button>
+          )}
         </div>
       </div>
-      <div className={show ? "sub-header show" : "sub-header" }>
+      <div className={show ? "sub-header show" : "sub-header"}>
         <button className="booknow">
-          <img src={calendar} alt="" /><span>BOOK NOW</span>
+          <img src={calendar} alt="" />
+          <span>BOOK NOW</span>
         </button>
       </div>
+
       <div className={open ? "booking-bar show" : "booking-bar"}>
         <button onClick={closeBooking} className="btn-hide">
           HIDE
