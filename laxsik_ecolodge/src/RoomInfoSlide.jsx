@@ -47,16 +47,41 @@ export default function RoomInfoSlide() {
       <Swiper
         spaceBetween={50}
         slidesPerView={5}
+        centeredSlides={true}
+        initialSlide={Math.floor(rooms.length / 2)}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
+        breakpoints={{
+          0: {
+            slidesPerView: 1, // mobile
+            centeredSlides: false,
+          },
+          
+          768: {
+            slidesPerView: 3, // tablet
+            centeredSlides: true,
+          },
+          1024: {
+            slidesPerView: 5, // desktop
+            centeredSlides: true,
+          },
+        }}
       >
         {rooms.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className={styles["slide-container"]}>
-              <img src={item.image} alt="image" />
-              <div className={styles["slide-title"]}>{item.title}</div>
-              <div className={styles["slide-desc"]}>{item.desc}</div>
-            </div>
+            {({ isActive }) => (
+              <div className={styles["slide-container"]}>
+                <img src={item.image} alt="image" />
+
+                {isActive && (
+                  <>
+                    <div className={styles["slide-title"]}>{item.title}</div>
+                    <div className={styles["slide-desc"]}>{item.desc}</div>
+                    <button className={styles["btn-ex"]}>EXPLORE</button>
+                  </>
+                )}
+              </div>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>

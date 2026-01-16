@@ -5,6 +5,10 @@
 .slide-container {
   background-color: white;
   border: 1px solid rgb(224, 224, 224);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
 }
 
 .slide-container img {
@@ -31,21 +35,19 @@
   text-align: center;
   font-family: "Montserrat";
   padding: 0 28px 16px;
-  display: none;
+  /* display: none; */
 }
 
-.slide-container:hover .slide-desc {
+/* .slide-container:hover .slide-desc {
   display: block;
-}
+} */
 
 .swiper-slide {
   width: 480px;
   height: 656px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   transform: scale(0.9) translateY(0);
   transition: transform 0.45s ease;
   z-index: 1;
@@ -132,6 +134,13 @@
   text-transform: uppercase;
 }
 
+.btn-ex {
+  background: #0d4949;
+  width: 90%;
+  color: #fff;
+  height: 46px;
+}
+
 @media (max-width: 391px) {
   .container {
     max-width: 390px;
@@ -139,6 +148,7 @@
 
   .container h3 {
     font-size: 22px;
+    margin: 2rem 0;
   }
 
   .title h1 {

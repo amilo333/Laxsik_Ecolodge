@@ -91,9 +91,13 @@
 @media screen and (max-width: 391px) {
   .info {
     height: 311px;
+    padding: 0 6px;
+    width: 100%;
   }
   .content-info {
     height: 311px;
+    
+    
   }
   .content-info .info h3 {
     font-family: "Lora";

@@ -4,7 +4,7 @@ import flag from "../src/assets/images/flag_eng.png";
 import calendar from "../src/assets/images/icon/ic_calendar.png";
 import "./header.css";
 import { useState } from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [show, setShow] = useState(false);
@@ -37,10 +37,21 @@ export default function Header() {
               ROOMS <img src={down} alt="" />
             </li>
             <li>
-              <Link style={{textDecoration: "none" ,color:'white'}} to={'dinning'}>DINING</Link>
+              <Link
+                style={{ textDecoration: "none", color: "white" }}
+                to={"dinning"}
+              >
+                DINING
+              </Link>
             </li>
             <li>
-              SPA & MASSAGE <img src={down} alt="" />
+              <Link
+                style={{ textDecoration: "none", color: "white" }}
+                to={"spa&massage"}
+              >
+                SPA & MASSAGE
+                <img src={down} alt="" />
+              </Link>
             </li>
             <li>
               NEWS <img src={down} alt="" />

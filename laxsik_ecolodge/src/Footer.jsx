@@ -7,7 +7,7 @@ import ic_twitter from "../src/assets/images/icon/ic_twitter.png";
 import ic_instagram from "../src/assets/images/icon/ic_instagram.png";
 import logo_1 from "../src/assets/images/logo/logo_1.png"
 
-export default function Footer() {
+export default function Footer({logo}) {
   return (
     <div>
       <div className={styles.container}>
